@@ -101,23 +101,6 @@ body {
   transform: scale(1.05);
 }
 
-.btn-demo {
-  background: rgba(255,255,255,0.1);
-  border: 1px solid rgba(255,255,255,0.2);
-  color: #fff;
-  padding: 1rem 2.5rem;
-  border-radius: 1rem;
-  font-weight: bold;
-  font-size: 1.1rem;
-  cursor: pointer;
-  transition: 0.2s;
-  margin-left: 0;
-}
-
-.btn-demo:hover {
-  background: rgba(255,255,255,0.2);
-}
-
 .preview-cards {
   display: grid;
   grid-template-columns: 1fr;
