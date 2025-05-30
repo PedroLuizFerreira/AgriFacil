@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>AgriFácil - Cotações Agrícolas</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="landing-page">
+    <div class="hero">
+      <div class="hero-bg"></div>
+      <div class="container hero-content">
+        <div class="hero-title">
+          <span style="background:#fff; border-radius:1rem; padding:0.7rem;">🌾</span>
+          Agri<span>Fácil</span>
+        </div>
+        <div class="hero-desc">
+          A plataforma mais completa para acompanhar cotações agrícolas em tempo real.
+          Tome decisões inteligentes com dados precisos do mercado.
+        </div>
+        <div class="hero-btns">
+          <button class="btn-main" id="go-dashboard">
+            Acessar Dashboard <span>→</span>
+          </button>
+          <button class="btn-demo">
+            Ver Demonstração
+          </button>
+        </div>
+        <div class="preview-cards">
+          <div class="preview-card">
+            <div class="icon">🌱</div>
+            <div class="name">Soja</div>
+            <div class="price">R$ 128,01</div>
+            <div class="var-up">+1.2% ↗</div>
+          </div>
+          <div class="preview-card">
+            <div class="icon">🐄</div>
+            <div class="name">Boi Gordo</div>
+            <div class="price">R$ 305,60</div>
+            <div class="var-up">+0.8% ↗</div>
+          </div>
+          <div class="preview-card">
+            <div class="icon">☕</div>
+            <div class="name">Café</div>
+            <div class="price">R$ 2.423,72</div>
+            <div class="var-down">-0.3% ↘</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="features-section">
+      <div class="container">
+        <div class="text-center">
+          <div class="features-title">Por que escolher o AgriFácil?</div>
+          <div class="features-desc">
+            Desenvolvemos a ferramenta mais completa para profissionais do agronegócio
+          </div>
+        </div>
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon">📊</div>
+            <div class="feature-title">Cotações em Tempo Real</div>
+            <div class="feature-desc">Acompanhe os preços das principais commodities agrícolas com atualizações automáticas a cada minuto.</div>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">⚡</div>
+            <div class="feature-title">Atualizações Instantâneas</div>
+            <div class="feature-desc">Receba notificações sobre mudanças significativas nos preços e tendências de mercado.</div>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">🛡️</div>
+            <div class="feature-title">Dados Confiáveis</div>
+            <div class="feature-desc">Informações precisas vindas das principais bolsas e mercados agrícolas do Brasil.</div>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">👥</div>
+            <div class="feature-title">Para Profissionais</div>
+            <div class="feature-desc">Desenvolvido especialmente para produtores, traders e profissionais do agronegócio.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="testimonials-section">
+      <div class="container">
+        <div class="text-center">
+          <div class="testimonials-title">O que nossos usuários dizem</div>
+        </div>
+        <div class="testimonials-grid">
+          <div class="testimonial-card">
+            <div class="testimonial-stars">★★★★★</div>
+            <div class="testimonial-content">
+              "O AgriFácil revolucionou como acompanho o mercado. Agora tomo decisões mais assertivas."
+            </div>
+            <div class="testimonial-name">João Silva</div>
+            <div class="testimonial-role">Produtor Rural</div>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-stars">★★★★★</div>
+            <div class="testimonial-content">
+              "Interface intuitiva e dados precisos. Essencial para meu trabalho diário."
+            </div>
+            <div class="testimonial-name">Maria Santos</div>
+            <div class="testimonial-role">Trader Agrícola</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="cta-section">
+      <div class="container">
+        <div class="cta-title">Pronto para revolucionar sua gestão agrícola?</div>
+        <div class="cta-desc">Junte-se a milhares de produtores que já usam o AgriFácil</div>
+        <button class="cta-btn" id="go-dashboard-cta">Começar Agora - É Grátis!</button>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="footer-logo">
+        <span class="icon">🌾</span>
+        <span style="font-size:1.3rem; font-weight:bold;">AgriFácil</span>
+      </div>
+      <div class="footer-copy">© 2025 AgriFácil. Todos os direitos reservados.</div>
+    </div>
+  </div>
+  <div id="dashboard-page" class="hidden">
+    <div class="dashboard-bg">
+      <div class="dashboard-container">
+        <div id="dashboard-loader" class="loader" style="display:none;">
+          <div class="loader-spin"></div>
+          <div>Carregando cotações...</div>
+        </div>
+        <div id="dashboard-content" style="display:none;">
+          <div class="dashboard-card">
+            <div class="dashboard-header">
+              <div class="dashboard-header-left">
+                <button class="dashboard-header-btn" id="back-landing" title="Voltar">
+                  <span style="display:inline-block; transform:rotate(180deg);">→</span>
+                </button>
+                <div class="dashboard-header-icon">🌾</div>
+                <div>
+                  <div class="dashboard-header-title">Cotações Agrícolas</div>
+                  <div class="dashboard-header-date" id="dashboard-date"></div>
+                </div>
+              </div>
+              <div class="dashboard-header-right">
+                <div class="dashboard-update-info" id="dashboard-update-info"></div>
+                <button class="dashboard-update-btn" id="dashboard-refresh">
+                  <span id="dashboard-refresh-spin" style="display:inline-block;">⟳</span>
+                  Atualizar
+                </button>
+              </div>
+            </div>
+            <div id="dashboard-alert" class="dashboard-alert hidden">
+              <span>⚠️</span>
+              <span id="dashboard-alert-msg"></span>
+            </div>
+          </div>
+          <div id="dashboard-dollar"></div>
+          <div id="dashboard-commodities"></div>
+          <div class="dashboard-footer">
+            <div class="dashboard-footer-logo">
+              <span class="icon">🌾</span>
+              <span class="dashboard-footer-title">AgriFácil</span>
+            </div>
+            <div class="dashboard-footer-desc">Sistema de Gestão Agrícola</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
